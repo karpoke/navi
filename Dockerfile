@@ -1,5 +1,4 @@
 # https://github.com/denisidoro/navi
-# https://github.com/denisidoro/navi/archive/master.zip
 
 FROM alpine:latest
 
