@@ -7,9 +7,10 @@ WORKDIR /myapp
 RUN apk update && \
     apk upgrade && \
     apk add --no-cache \
+        bash \
+        curl \
         git \
-	make \
-	bash
+        make
 
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
     yes | ~/.fzf/install 
@@ -20,4 +21,4 @@ RUN git clone --depth 1 https://github.com/denisidoro/navi && \
 
 ENV PATH="~/.fzf/bin:${PATH}"
 
-ENTRYPOINT [ "bash", "-c", "navi" ]
+ENTRYPOINT [ "bash", "-c", "navi $0 $@" ]
