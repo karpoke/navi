@@ -21,4 +21,4 @@ RUN git clone --depth 1 https://github.com/denisidoro/navi && \
 
 ENV PATH="~/.fzf/bin:${PATH}"
 
-ENTRYPOINT [ "bash", "-c", "navi $0 $@" ]
+ENTRYPOINT [ "bash", "-c", "navi $0 $@ --print" ]
