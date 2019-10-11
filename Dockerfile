@@ -12,7 +12,7 @@ RUN apk update && \
         git \
         make
 
-RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
+RUN git clone https://github.com/junegunn/fzf.git ~/.fzf && \
     yes | ~/.fzf/install 
 
 RUN git clone --depth 1 https://github.com/denisidoro/navi && \
