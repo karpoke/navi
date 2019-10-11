@@ -15,7 +15,7 @@ RUN apk update && \
 RUN git clone https://github.com/junegunn/fzf.git ~/.fzf && \
     yes | ~/.fzf/install 
 
-RUN git clone --depth 1 https://github.com/denisidoro/navi && \
+RUN git clone https://github.com/denisidoro/navi && \
     cd navi && \
     git checkout tags/v0.12.0 && \
     make install
