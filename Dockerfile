@@ -17,6 +17,7 @@ RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
 
 RUN git clone --depth 1 https://github.com/denisidoro/navi && \
     cd navi && \
+    git checkout tags/v0.12.0 && \
     make install
 
 ENV PATH="~/.fzf/bin:${PATH}"
