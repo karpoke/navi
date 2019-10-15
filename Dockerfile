@@ -20,6 +20,10 @@ RUN git clone https://github.com/denisidoro/navi && \
     git checkout tags/v0.12.0 && \
     make install
 
-ENV PATH="~/.fzf/bin:${PATH}"
+ENV PATH="~/.fzf/bin:${PATH}" \
+    NAVI_PATH="/myapp" \
+    FZF_DEFAULT_OPTS="--height 40% --border --inline-info"
+
+COPY misc.cheat /myapp
 
 ENTRYPOINT [ "bash", "-c", "navi $0 $@ --print" ]

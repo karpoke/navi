@@ -1,0 +1,10 @@
+% misc
+
+# displays some statistics about the cache
+apt-cache stats
+
+# it removes the user's cached credentials
+sudo -K
+
+# ignore the user's cached credentials
+sudo -k <command>
