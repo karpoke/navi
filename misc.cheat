@@ -8,3 +8,21 @@ sudo -K
 
 # ignore the user's cached credentials
 sudo -k <command>
+
+# send command to tmux
+tmux send-keys '<command>' Enter
+
+# create new layout with tmuxinator
+tmuxinator new <name>
+$ name: tmuxinator list | tail -n +2
+
+# edit tmuixnator layout
+mux edit <name>
+$ name: tmuxinator list | tail -n +2
+
+# timestamp to date
+date -d @<timestamp>
+
+# kill user's terminal
+skill -KILL -t <terminal>
+$ terminal: who | awk '{print $2}'
