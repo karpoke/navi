@@ -13,11 +13,11 @@ RUN apk update && \
         make
 
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
-    yes | ~/.fzf/install 
+    yes | ~/.fzf/install
 
 RUN git clone https://github.com/denisidoro/navi && \
     cd navi && \
-    git checkout tags/v0.12.0 && \
+    git checkout tags/v0.14.3 && \
     make install
 
 ENV PATH="~/.fzf/bin:${PATH}" \
